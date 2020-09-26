@@ -25,6 +25,7 @@ router.get('/:id/tasks', (req, res) => {
       res.status(200).json(tasks)
     })
     .catch(err => {
+      console.log(err)
       res.status(500).json({ message: 'Sorry, something went wrong', error: err })
     })
 })
@@ -56,13 +57,14 @@ router.post('/:id/tasks', verifyTaskSchema, (req, res) => {
       res.status(201).json(task)
     })
     .catch(err => {
+      console.log(err)
       res.status(500).json({ message: 'Sorry, something went wrong', error: err })
     })
 })
 
 router.post('/:id/resources', (req, res) => {
-  db.addResourceToProject(req.body.id)
-    .then(count => {
+  db.addResourceToProject(req.project.id, req.body.id)
+    .then(id => {
       res.status(201).json({ message: `Successfully added ${req.body.name} to ${req.project.name}` })
     })
     .catch(err => {
