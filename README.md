@@ -48,11 +48,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between `Relational Databases` and `SQL`.
 
+    - Relational databases are databases with relatable information, SQL on the other hand, is the language we use to interact with these databases, to store and retrieve the data that they store
+
 2. Why do tables need a `primary key`?
+
+    - tables need a primary key so that each row has a unique identifier that singles it out from any other rows
 
 3. What is the name given to a table column that references the primary key on another table.
 
+    - foreign key
+
 4. What do we need in order to have a _many to many_ relationship between two tables.
+
+    - a seperate, third table that contains two foreign keys, one for each table
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
